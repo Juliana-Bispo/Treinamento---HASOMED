@@ -19,27 +19,13 @@
 - `initialize_ccl`
 - `update_ccl`
 - `stop_ccl`
-
-## Reunião sobre FES Trike
-
-- **Inscrição da Campus Party**
-  - Ver a disponibilidade dos membros;
-  - Ver a disponibilidade do Estevão;
-  - Montar horários;
-  - Ver se o Rodrigo pode levar a Trike;
-  - Falar com o Danilo para levar o projeto;
-
-- **Obsidium**: aprender a usar o software;
-- **Rasomed**: onde irei mexer;
 - Tirar o ROS e deixar botões para controle:
   - Comunicação;
   - Definição de parâmetros;
   - Controle;
 
-- Criar pasta de treinamento no Git para explicar o que fiz e deixar anotado para outras pessoas;
 
 ## Próximos passos:
-- Ler regulamento de inscrição da Campus Party e organizar;
 - Terminar o código `stim_node.py`;
 
 ---
