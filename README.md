@@ -1,6 +1,4 @@
-# 09/06/25 - Estudando o `stim_node.py`
-
-**Segunda-feira, 9 de junho de 2025 - 08:21**
+# 09/06 - Estudando o `stim_node.py`
 
 - Primeiramente, usei o site [wiki.ros.org/pt_BR/ROS/Tutorials](http://wiki.ros.org/pt_BR/ROS/Tutorials) para entender melhor e achar as funções que usam o ROS dentro do código, e fui deixando os trechos comentados para não esquecer o que estou retirando do código;
 - Aqui só li sobre os tópicos de iniciante;
@@ -30,9 +28,7 @@
 
 ---
 
-# 11/06/25 - Estudando o `stim_node.py` - pt. 2
-
-**Quarta-feira, 11 de junho de 2025 - 08:51**
+# 11/06 - Estudando o `stim_node.py` - pt. 2
 
 - Continuação do estudo e atualização do código `stim_node.py`
 - Fiz alterações nos trechos que definem os objetos `initialize_ccl` e `stop_ccl`:
