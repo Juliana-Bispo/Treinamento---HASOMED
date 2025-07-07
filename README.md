@@ -54,3 +54,13 @@
   - Chamei o objeto de parada `stop_ccl`;
 
 - **Próximo dia vou testar o código no Rasomed.**
+
+
+# 02/07 - Teste no Rasomed
+
+- Primeiraamente montei o Eletroestimulador Rasomed com a orientação do Guilherme e tentei rodar de primeira o código, mas não funcionou;
+  - O primeiro erro que deu foi na hora de acessar a porta, no codigo original a porta era acessada por `PORT = "/dev/stim"`, mas como estou usando o Windows a forma de acessar é diferente, deve ser por `PORT = "COM5"`
+  - Para saber qual é a porta serial, depois d conectar o Rasomed via usb no pc, digitei `mode` no terminal para me mostrar qual é a porta que está sendo usada;
+  - O segundo erro que deu apos corrigir o anterior foi no termo `time.delay(5)` que eu escrevi dentro de `main()`, em Pyton deve ser `time.sleep(5)`
+- Depois das correções feitas, o código rodou sem problemas no Rasomed e testei na perna do Guilherme;
+- Na semana seguinte, testei em mim mesma para entender melhor os parâmetros de `pulse_width` e `pulse_current`
