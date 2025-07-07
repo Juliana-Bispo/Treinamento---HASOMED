@@ -6,7 +6,7 @@ import struct
 
 class StimNode:   # Antes com o ROS era Class StimNode(Node):
 
-    PORT = "/dev/stim"
+    PORT = "COM5"
     # channels used as low frequency 
     CHANNEL_LF = []
     # stimulation frequency
@@ -59,8 +59,6 @@ class StimNode:   # Antes com o ROS era Class StimNode(Node):
         ) 
     print("[INFO] StimNode inicializado")
 
-    
-    #
         
 
     def set_channel_byte(self,bit_list, channel_list):
@@ -306,12 +304,12 @@ def main(args=None):
 
     stim_object.initialize_ccl(channels)
 
-    pulse_width = [100]
-    pulse_current = [5]
+    pulse_width = [100]    #na perna ta bom e no braço pode deixar também, mas depois vou variar
+    pulse_current = [5]    #no braço entre 5 e 10, na perna 15
 
     stim_object.update_ccl(pulse_width,pulse_current)
 
-    time.delay(5)
+    time.sleep(5)
 
     stim_object.stop_ccl()
 
