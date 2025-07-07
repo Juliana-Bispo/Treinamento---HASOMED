@@ -56,11 +56,17 @@
 - **Próximo dia vou testar o código no Rasomed.**
 
 
-# 02/07 - Teste no Rasomed
+# 02/07 - 1° Teste no Hasomed
 
 - Primeiraamente montei o Eletroestimulador Rasomed com a orientação do Guilherme e tentei rodar de primeira o código, mas não funcionou;
   - O primeiro erro que deu foi na hora de acessar a porta, no codigo original a porta era acessada por `PORT = "/dev/stim"`, mas como estou usando o Windows a forma de acessar é diferente, deve ser por `PORT = "COM5"`
   - Para saber qual é a porta serial, depois d conectar o Rasomed via usb no pc, digitei `mode` no terminal para me mostrar qual é a porta que está sendo usada;
   - O segundo erro que deu apos corrigir o anterior foi no termo `time.delay(5)` que eu escrevi dentro de `main()`, em Pyton deve ser `time.sleep(5)`
 - Depois das correções feitas, o código rodou sem problemas no Rasomed e testei na perna do Guilherme;
-- Na semana seguinte, testei em mim mesma para entender melhor os parâmetros de `pulse_width` e `pulse_current`
+
+# 07/07 - 2° Teste no Hasomed
+
+- Testei o codigo pronto em mim mesma para entender melhor os parâmetros de `pulse_width` e `pulse_current`;
+- Testei no braço, comecei usando `pulse_width` igual à 100 e `pulse_current` igual à 5: senti um leve formigamento.
+- Depois fui alterando o valor de `pulse_current`, subindo de 2 em 2 ate chegar à 10, quando estava em 8 comecei a sentir o musculo se contraindo mas sem fazer o movimento da articulação e continuou igual no pulso de corrente igual à 10;
+- Depois desci o pulso de corrente para 5 e fui alterando a largura de pulso de 100 ate chegar em 200: em 150 senti o músculo contrair, mas ainda sem movimento de articulação, a partir de 180 senti o músculo contrair e observei o movimento de articulação;
