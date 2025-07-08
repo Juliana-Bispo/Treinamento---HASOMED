@@ -8,10 +8,10 @@ Este repositório tem como propósito principal servir como ambiente de **treina
 
 Os códigos originais utilizam o framework **ROS (Robot Operating System)** para comunicação e controle dos dispositivos. No entanto, para facilitar o aprendizado e tornar o código mais acessível, um dos principais objetivos deste repositório é:
 
-- **Simplificar a implementação** removendo dependências do ROS;
-- **Manter a funcionalidade equivalente** ao código original;
-- **Facilitar o entendimento** dos protocolos de comunicação;
-- **Criar material didático** para novos membros do projeto;
+- Simplificar a implementação removendo dependências do ROS;
+- Manter a funcionalidade equivalente ao código original;
+- Facilitar o entendimento dos protocolos de comunicação;
+- Criar material didático para novos membros do projeto;
 
 ### Estrutura de Aprendizado
 
