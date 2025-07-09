@@ -405,4 +405,4 @@ if __name__ == '__main__':
   4. Atualiza parâmetros
   5. Mantém estimulação por 5 segundos
   6. Para a estimulação
-- **Comentários**: Indica uso específico para estimulação no braço com parâmetros seguros (5-10mA)
+
