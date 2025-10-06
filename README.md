@@ -128,4 +128,6 @@ pip uninstall pyserial
 pip install pyserial 
 ``` 
 - Por fim rodei novamente e deu o erro na linha 10 por não estar conectada a nenhuma porta serial, depois liguei e conectei o Hasomed, testei da forma correta e funcionou;
-  ![Demonstração no braço, usando 100us de largura de pulso e 8mA de corrente](https://github.com/Juliana-Bispo/Treinamento---HASOMED/blob/main/assets/demo_bra%C3%A7o.gif)
+
+  
+![Demonstração no braço, usando 100us de largura de pulso e 8mA de corrente](https://github.com/Juliana-Bispo/Treinamento---HASOMED/blob/main/assets/demo_bra%C3%A7o.gif)
