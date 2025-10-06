@@ -70,3 +70,48 @@
 - Testei no braço, comecei usando `pulse_width` igual à 100 e `pulse_current` igual à 5: senti um leve formigamento.
 - Depois fui alterando o valor de `pulse_current`, subindo de 2 em 2 ate chegar à 10, quando estava em 8 comecei a sentir o musculo se contraindo mas sem fazer o movimento da articulação e continuou igual no pulso de corrente igual à 10;
 - Depois desci o pulso de corrente para 5 e fui alterando a largura de pulso de 100 ate chegar em 200: em 150 senti o músculo contrair, mas ainda sem movimento de articulação, a partir de 180 senti o músculo contrair e observei o movimento de articulação;
+
+# 03/10 - 3° Teste no Hasomed
+
+Primeiramente peguei o codigo que tinha ajustado antes e testado para testar e demonstrar novamente, mas não rodou: 
+- Tentamos no meu pc e o vscode tentava abrir o conda e dava erro;
+- Tentamos mudar o interpretador de python para um que não use o Conda e deu o seguinte erro:
+
+```Python
+Traceback (most recent call last): 
+
+  File "c:\Users\julia\Desktop\UnB\EMA\eletroestimuladores\inicio\stim_node.py", line 4, in <module> 
+
+    import serial 
+
+ModuleNotFoundError: No module named 'serial' 
+```
+
+- Depois rodamos novamente e apreceu:
+
+```Python
+Traceback (most recent call last): 
+
+  File "c:\Users\julia\Desktop\UnB\EMA\eletroestimuladores\inicio\stim_node.py", line 319, in <module> 
+
+    main() 
+
+  File "c:\Users\julia\Desktop\UnB\EMA\eletroestimuladores\inicio\stim_node.py", line 303, in main 
+
+    stim_object = StimNode() 
+
+                  ^^^^^^^^^^ 
+
+  File "c:\Users\julia\Desktop\UnB\EMA\eletroestimuladores\inicio\stim_node.py", line 53, in __init__ 
+
+    self.serial_port = serial.Serial( 
+
+                       ^^^^^^^^^^^^^ 
+
+AttributeError: module 'serial' has no attribute 'Serial' 
+```
+
+- Desistimos de tentar no meu pc e tentamos no pc do Lucas, mas não conseguimos testar pois:
+    - Primeiramente trocamos a forma como o codigo acessa a porta serial;
+    - Depois estando tudo certo e rodando o código, por algum motivo não saiu nenhum estimulo do hasomed para a pessoa que iria recber o estimulo;
+    - Ficamos de testar na próxima semana; 
