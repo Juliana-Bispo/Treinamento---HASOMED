@@ -383,8 +383,8 @@ def main(args=None):
     
     stim_object.initialize_ccl(channels)
     
-    pulse_width = [180]     #no braço
-    pulse_current = [8]    #no braço entre 5 e 10
+    pulse_width = [180]     #no braço a partir de 60us
+    pulse_current = [8]    #no braço entre 5mA e 10mA
     
     stim_object.update_ccl(pulse_width,pulse_current)
     
@@ -401,7 +401,7 @@ if __name__ == '__main__':
 - **Sequência de operações**:
   1. Cria instância do estimulador
   2. Inicializa canal 1
-  3. Configura estimulação (180μs de largura, 8mA de corrente)
+  3. Configura estimulação (para o músculo quadriceps 180μs de largura e 8mA de corrente, no braço seria)
   4. Atualiza parâmetros
   5. Mantém estimulação por 5 segundos
   6. Para a estimulação
