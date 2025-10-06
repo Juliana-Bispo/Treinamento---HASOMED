@@ -60,7 +60,7 @@
 
 - Primeiraamente montei o Eletroestimulador Rasomed com a orientação do Guilherme e tentei rodar de primeira o código, mas não funcionou;
   - O primeiro erro que deu foi na hora de acessar a porta, no codigo original a porta era acessada por `PORT = "/dev/stim"`, mas como estou usando o Windows a forma de acessar é diferente, deve ser por `PORT = "COM5"`
-  - Para saber qual é a porta serial, depois d conectar o Rasomed via usb no pc, digitei `mode` no terminal para me mostrar qual é a porta que está sendo usada;
+  - Para saber qual é a porta serial, depois d conectar o Rasomed via usb no pc, digitei `mode` no terminal para me mostrar qual é a porta que está sendo usada (no linux ou macOs o comando é `ls /dev/tty*`);
   - O segundo erro que deu apos corrigir o anterior foi no termo `time.delay(5)` que eu escrevi dentro de `main()`, em Pyton deve ser `time.sleep(5)`
 - Depois das correções feitas, o código rodou sem problemas no Rasomed e testei na perna do Guilherme;
 
@@ -115,3 +115,16 @@ AttributeError: module 'serial' has no attribute 'Serial'
     - Primeiramente trocamos a forma como o codigo acessa a porta serial;
     - Depois estando tudo certo e rodando o código, por algum motivo não saiu nenhum estimulo do hasomed para a pessoa que iria recber o estimulo;
     - Ficamos de testar na próxima semana; 
+
+# 06/10 - 4° teste no Hasomed
+Comecei a corrigir os erros que deram no último teste: 
+- Primeiramente desistalei os pacotes serial e pyserial, pois poderiam estar causando conflito na hora de rodar: 
+```Python
+pip uninstall serial 
+pip uninstall pyserial 
+```
+- Depois reinstalei: 
+```Python
+pip install pyserial 
+``` 
+- Por fim rodei novamente e deu o erro na linha 10 por não estar conectada a nenhuma porta serial, depois liguei e conectei o Hasomed, testei da forma correta e funcionou;
