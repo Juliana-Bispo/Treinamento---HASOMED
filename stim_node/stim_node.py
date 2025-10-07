@@ -6,7 +6,7 @@ import struct
 
 class StimNode:   # Antes com o ROS era Class StimNode(Node):
 
-    PORT = "/dev/stim"
+    PORT = "COM5"    #para linux deve ser: PORT = "/dev/stim"
     # channels used as low frequency 
     CHANNEL_LF = []
     # stimulation frequency
@@ -306,12 +306,12 @@ def main(args=None):
 
     stim_object.initialize_ccl(channels)
 
-    pulse_width = [100]
-    pulse_current = [5]
+    pulse_width = [100]    #no braço a partir de 50us
+    pulse_current = [5]    #no braço entre 5mA e 10mA
 
     stim_object.update_ccl(pulse_width,pulse_current)
 
-    time.delay(5)
+    time.sleep(5)
 
     stim_object.stop_ccl()
 
